@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CampusFlow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="top-bar">
+    <div class="logo">
+      <h1>
+        <span class="campus">Campus</span>
+        <span class="flow" id="flowText">Flow</span>
+      </h1>
+      <p>Shared resource booking & visibility system</p>
+    </div>
+  </header>
+
+  <!-- BOOKING PANEL -->
+  <section class="booking-panel">
+    <h2>Book a Resource</h2>
+
+    <form id="bookingForm">
+
+      <input id="userName" placeholder="Your full name" required />
+
+      <input id="phone" placeholder="Phone number" required />
+
+      <input id="email" placeholder="SST Email ID" required />
+
+      <select id="resource">
+        <option value="Meeting Room">Meeting Room</option>
+        <option value="Playing Turf">Playing Turf</option>
+        <option value="Table Tennis Table">Table Tennis Table</option>
+        <option value="8 Ball Pool Table">8 Ball Pool Table</option>
+      </select>
+
+      <div class="time-group">
+        <label>
+          Start Time
+          <input type="time" id="startTime" required />
+        </label>
+
+        <label>
+          End Time
+          <input type="time" id="endTime" required />
+        </label>
+      </div>
+
+      <input type="date" id="date" required />
+
+      <textarea id="purpose" placeholder="Purpose (optional)"></textarea>
+
+      <button type="submit">Confirm Booking</button>
+
+    </form>
+  </section>
+
+  <!-- DASHBOARD -->
+  <main class="dashboard">
+
+    <!-- BOOKINGS -->
+    <section class="bookings">
+      <h2>Current & Upcoming Bookings</h2>
+      <div id="bookingList"></div>
+    </section>
+
+    <!-- ACTIVITY -->
+    <aside class="activity">
+      <h2>Activity Log</h2>
+      <ul id="activityLog"></ul>
+    </aside>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
